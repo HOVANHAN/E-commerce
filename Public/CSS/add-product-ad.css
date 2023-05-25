@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  --bg-grey: #885a5a;
+  --bg-green: #84b082;
+  --bg-dark-green: #5d7565;
+}
+.add-product h2 {
+  font-size: 36px;
+  font-weight: 600 !important;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  color: black;
+}
+
+.add-product .form-product {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  width: 100vw;
+  margin-top: 30px;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.add-product form {
+  background-color: #fff;
+  width: 80vw;
+  height: min(90vh, calc(80% + 100px));
+  margin: auto auto;
+  padding-bottom: 8rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-product form fieldset {
+  width: 80%;
+  max-width: 900px;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.add-product .input-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.add-product .input-block label,
+.add-product .input-block span {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.add-product .input-block input,
+.add-product .input-block textarea,
+.add-product .input-block select {
+  padding: 16px 12px;
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #333333;
+  border-radius: 6px;
+}
+
+.add-product .input-block input:focus,
+.add-product .input-block textarea:focus,
+.add-product .input-block select:focus {
+  border-color: #195f93;
+}
+
+.add-product .input-block input.filled,
+.add-product .input-block textarea.filled,
+.add-product .input-block select.filled {
+  border: 1px solid #195f93;
+}
+
+.add-product .input-block select:focus {
+  z-index: 1;
+}
+
+.add-product .input-block input::placeholder,
+.add-product .input-block textarea::placeholder,
+.add-product .input-block select::placeholder {
+  font-weight: 400;
+  color: #6a7090;
+  letter-spacing: normal;
+}
+.add-product .input-block textarea {
+  resize: none;
+  max-height: 160px;
+  width: 100%;
+}
+
+.add-product .input-block.upload {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.add-product .input-block.upload input[type="file"] {
+  display: none;
+}
+
+.add-product .input-block.upload .upload-btn {
+  display: block;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6a7090;
+  padding: 4px 8px;
+  width: 140px;
+  cursor: pointer;
+}
+
+.add-product .input-block.upload .upload-btn.active {
+  border: 1px solid #195f93;
+}
+
+.add-product .input-block.upload .upload-btn:hover {
+  border-color: #195f93;
+}
+
+.add-product button {
+  border: none;
+  font-weight: 400;
+  padding: 10px 80px;
+  background-color: var(--bg-green);
+  color: white;
+  border-radius: 6px !important;
+  cursor: pointer;
+}
+
+.add-product button:hover {
+  background-color: var(--bg-dark-green);
+}
+.add-product button .submit {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+@media (max-width: 860px) {
+  form .header p {
+    margin-bottom: 2rem;
+  }
+
+  .input-block.upload .upload-btn {
+    width: 12rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .input-block.upload .upload-btn {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 620px) {
+  form {
+    height: auto;
+  }
+
+  form .header {
+    margin-bottom: 1rem;
+  }
+
+  form .header p {
+    margin-top: 2rem;
+  }
+
+  .input-block input,
+  .input-block textarea,
+  .input-block select {
+    padding: 1.2rem 1rem;
+  }
+
+  .input-block select {
+    font-size: 1.4rem;
+  }
+
+  .input-block textarea {
+    max-height: 12rem;
+  }
+
+  .input-block input::placeholder,
+  .input-block textarea::placeholder,
+  .input-block select::placeholder {
+    font-size: 1.4rem;
+  }
+
+  .input-block i {
+    top: 3.3rem;
+  }
+
+  form fieldset {
+    display: unset;
+  }
+
+  .input-block.upload .upload-btn {
+    width: 16rem;
+  }
+
+  button {
+    width: 34rem;
+  }
+}
+
+@media (max-width: 350px) {
+  form .header p {
+    font-size: 1.5rem;
+  }
+
+  form .header h3 {
+    font-size: 2.5rem;
+  }
+
+  .input-block.upload .upload-btn {
+    width: 14rem;
+  }
+
+  button {
+    width: 30rem;
+  }
+}
+.panel .btn-back {
+  font-weight: 400;
+  font-size: 18px;
+  color: #195f93;
+}
+.panel .btn-back p {
+  font-size: 16px;
+  text-decoration: none !important;
+}
+.panel .btn-back :hover {
+  color: #2c3a4a;
+}
+.user_content {
+  color: white;
+}
+.user_content a,
+.user_content {
+  color: white;
+  font-size: 16px !important;
+}
+.user_content a:hover {
+  color: white;
+}
+.input-block_1 input{
+  height: 150px;
+}

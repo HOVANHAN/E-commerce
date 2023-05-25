@@ -1,0 +1,195 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    --bg-grey: #885a5a;
+    --bg-green: #84b082;
+}
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.container-fluid{
+    padding: 0 !important;
+}  
+.navbar{
+    padding: 10px 50px !important;
+    background-color: var(--bg-grey);
+}
+.navbar-logo{
+    overflow: hidden;
+}
+.navbar img{
+    width: 90%;
+}
+.navbar img:hover{
+    cursor: pointer;
+}
+.navbar a{
+    color: #fff;
+    font-size: 10px;
+}
+.navbar ul, .navbar li, .navbar a{
+    float: left;
+    display: inline;
+}
+@media only screen and (min-width: 576px){
+    .navbar a{
+        font-size: 12px;
+    }
+    .navbar img{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 992px){
+    .navbar a{
+        font-size: 16px;
+    }
+    .navbar img{
+        margin-top: 10px;
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .navbar a{
+        font-size: 20px;
+    }
+    .navbar img{
+        margin-top: 0px;
+        width: 40%;
+    }
+}
+.navbar a:hover{
+    color: var(--bg-green);
+    text-decoration: none;
+}
+.navbar .navbar-nav{
+    margin: 0 auto;
+}
+.navbar .navbar-nav li{
+    padding: 0 10px;
+}
+.navbar .form-control:focus{
+    border: none;
+    box-shadow: none;
+}
+.navbar .nav-icon-search{
+    margin-left: 8px;
+    font-size: 16px;
+    margin-top: 8px;
+    color: #fff;
+}
+.navbar input{
+    height: 23px;
+    width: 80px !important;
+}
+.navbar .form-inline{
+    margin-left: 20px;
+    display: inline-block;
+}
+@media only screen and (min-width: 576px){
+    .navbar .form-inline{
+        margin-left: 70px;
+        display: inline;
+    }
+}
+@media only screen and (min-width: 630px){
+    .navbar .form-inline{
+        margin-left: 20px;
+    }
+    .navbar input{
+        height: unset;
+        width: 150px !important;
+    }
+}
+@media only screen and (min-width: 992px){
+    .navbar .form-inline{
+        margin-left: 40px;
+    }
+    .navbar .nav-icon-search{
+        font-size: 18px;
+    }
+    .navbar input{
+        width: auto !important;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .navbar .form-inline{
+        margin-left: 150px;
+    }
+    .navbar .nav-icon-search{
+        font-size: 20px;
+        margin-top: 8px;
+    }
+}
+.navbar .nav-icon-search:hover{
+    color: var(--bg-green);
+    cursor: pointer;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+@media only screen and (max-width: 576px){
+    .navbar .dropdown{
+        margin-left: 15px;
+    }
+}
+@media (min-width: 576px) and (max-width: 992px){
+    .navbar .dropdown{
+        margin-left: 30px;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .navbar .dropdown{
+        margin-left: 80px;
+    }
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: #f9f9f975;
+  width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    text-align: center;
+  color: black;
+  padding: 8px 18px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media only screen and (max-width: 576px){
+    .navbar .navbar-nav li{
+        display: inline-block;
+    }
+    .dropdown-content {
+        width: 80px;
+      }
+}

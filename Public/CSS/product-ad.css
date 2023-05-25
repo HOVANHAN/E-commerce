@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    --bg-grey: #885a5a;
+    --bg-green: #84b082;
+    --bg-dark-green: #5d7565;
+}
+h2 {
+    font-size:36px; 
+    font-weight: 600 !important;
+    text-align: center;
+    display: block;
+    line-height: 1em;
+    color: black;
+}
+.productlist th h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+}
+td a{
+    color: #195F93;
+}
+td a:hover{
+    color: var(--bg-grey);
+    text-decoration: none;
+}
+.productlist {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+.productlist td, .productlist th {
+   padding: 10px; 
+}
+.productlist tr{
+    background-color:  white;
+}
+.productlist th {
+    background: var(--bg-dark-green);
+}
+.productlist td {
+    background: var(--bg-green);
+}
