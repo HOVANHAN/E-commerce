@@ -21,7 +21,7 @@
 <body>
     <!-- header -->
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/blocks/header.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/blocks/header.php");
     ?>
     <!-- body -->
     <div class="container-fluid px-5 viewproduct">

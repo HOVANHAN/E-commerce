@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Models/ProductModel.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Models/ProductModel.php");
 
 class ProductController
 {
@@ -14,22 +14,22 @@ class ProductController
     {
         if (!isset($_GET["productid"]) && !isset($_POST['keyword'])) {
             $products = $this->model->getProductList();
-            include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/users/productlist.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/users/productlist.php");
         } 
         else if (!isset($_GET["productid"]) && isset($_POST['keyword'])) {
             $products = $this->model->searchProduct($_POST['keyword']);
-            include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/users/productlist.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/users/productlist.php");
         }
         else {
             $product = $this->model->getProduct($_GET["productid"]);
-            include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/users/viewproduct.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/users/viewproduct.php");
         }
     }
     public function invokeAdmin()
     {
         if (!isset($_GET["productid"])) {
             $products = $this->model->getProductList();
-            include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/admin/productlist.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/admin/productlist.php");
             if (isset($_GET['action'])) {
                 if ($_GET['action'] == 'delete') {
                     if (isset($_GET['id'])) {
@@ -40,7 +40,7 @@ class ProductController
             }
         } else {
             $product = $this->model->getProduct($_GET["productid"]);
-            include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/admin/update-product.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/admin/update-product.php");
             if (isset($_POST['submit'])) {
                 $result = $this->model->updateProduct($_POST['id'], $_POST['name'], $_POST['description'], $_POST['price'], $_POST['image'], $_POST['category']);
             }
@@ -51,11 +51,11 @@ class ProductController
         if (isset($_POST['submit'])) {
             $result = $this->model->createProduct($_POST['name'], $_POST['description'], $_POST['price'], $_POST['image'], $_POST['category']);
             if ($result) {
-                include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/admin/create-product.php");
+                include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/admin/create-product.php");
             } else {
             }
         } else {
-            include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/admin/create-product.php");
+            include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/admin/create-product.php");
         }
     }   
 

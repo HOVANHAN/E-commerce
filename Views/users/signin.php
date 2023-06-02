@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <!-- link font -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+		.my-footer{
+			position: absolute;
+    		bottom: 0;
+    		left: 0;
+		}
+	</style>
+
 </head>
 
 <body>

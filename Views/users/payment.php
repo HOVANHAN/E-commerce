@@ -21,7 +21,7 @@
 <body>
     <!-- header -->
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/blocks/header.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/blocks/header.php");
     ?>
     <section class="h-100 gradient-custom">
         <div class="container py-5">

@@ -1,5 +1,5 @@
 <?php
-require_once("../../Models/UserModel.php");
+require_once("../../Models/userModel.php");
 //session_start();
 class UserController
 {

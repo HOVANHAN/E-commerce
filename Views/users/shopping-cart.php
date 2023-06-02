@@ -17,12 +17,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <!-- link font -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+		.my-footer{
+			position: absolute;
+    		bottom: 0;
+    		left: 0;
+		}
+	</style>
 </head>
 
 <body>
     <!-- header -->
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/blocks/header.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/blocks/header.php");
     ?>
     <?php
     require_once("../users/msg.php");
@@ -133,7 +141,7 @@
 
     <!--Footer-->
     <?php
-    include($_SERVER['DOCUMENT_ROOT'] . "/do-an-web/do-an-web-php/Views/blocks/footer.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/E-commerce/Views/blocks/footer.php");
     ?>
     <!-- link bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -39,7 +39,7 @@ session_start();
                         <a class="nav-link" href="../users/shopping-cart.php">CART</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../users/support.php">hahah</a>
+                        <a class="nav-link" href="../users/support.php">CHATBOT</a>
                     </li>
 
                 </ul>
