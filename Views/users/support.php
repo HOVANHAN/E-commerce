@@ -99,7 +99,8 @@
 
 				$headers = array();
 				$headers[] = 'Content-Type: application/json';
-				$headers[] = 'Authorization:Bearer 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';
+				// $headers[] = 'Authorization:Bearer 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';
+				$headers[] = 'Authorization:Bearer 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';
 				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 
